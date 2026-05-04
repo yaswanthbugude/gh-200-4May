@@ -22,7 +22,3 @@ jobs:
           echo "-------------------------------"
           figlet -f slant "GitHub Actions"
           echo "✅ ASCII art generated using figlet!"
-
-      - name: Run Shell Script
-        run: |
-          ./scripts/greet.sh
