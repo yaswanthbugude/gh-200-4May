@@ -1,25 +1,28 @@
-name: Cohack Journey
+name: CoHack Journey
 
 on: push
 
 jobs:
-
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      -  name: Say Hello BN
-         run: echo "Hello from GH-200 session! Lets create some great workflow files"
+      - name: Say Hello
+        run: echo "Hello from GH-200 Sesion! Lets create some great Workflow files"
 
-      -  name:  Checkout Repo
-         uses: actions/Checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v6
 
-      -  name: list files
-         run: ls -la
-         
-      -  name: Generate ASCII Artwork
-         run:  
-           sudo apt-get install -y figlet
-           figlet "GH-200 CoHack"
-           echo "-------------------------------"
-           figlet -f slant "GitHub Actions"
-           echo "ASCII artwork generated using figlet!"
+      - name: List files
+        run: ls -la
+
+      - name: 🎨 Generate ASCII Artwork
+        run: |
+          sudo apt-get install -y figlet
+          figlet "GH-200 CoHack"
+          echo "-------------------------------"
+          figlet -f slant "GitHub Actions"
+          echo "✅ ASCII art generated using figlet!"
+
+      - name: Run Shell Script
+        run: |
+          ./scripts/greet.sh
