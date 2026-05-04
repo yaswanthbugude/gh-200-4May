@@ -14,9 +14,10 @@ jobs:
          uses: actions/Checkout@v6
 
       -  name: list files
-         run: ls -la 
+         run: ls -la
+         
       -  name: Generate ASCII Artwork
-         run:
+         run: 
            sudo apt-get install -y figlet
            figlet "GH-200 CoHack"
            echo "-------------------------------"
