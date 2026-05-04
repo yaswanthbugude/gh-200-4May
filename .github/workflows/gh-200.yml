@@ -1,0 +1,11 @@
+name: Cohack Journey
+
+on: push
+
+jobs:
+
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      -  name: Say Hello BN
+         run: echo "Hello from GH-200 session! Lets create some great workflow files"
